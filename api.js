@@ -4,7 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const upload = require("multer")();
 
-app.use(require("cors")()); 
+app.use(require("cors")({origin: 'https://angry-engelbart-d54e0d.netlify.app/'})); 
 app.use(bodyParser.json());
 
 app.get('/', (req, res, next) => {
