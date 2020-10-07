@@ -7,7 +7,7 @@ module.exports = (email, nome, mensagem, anexo) => {
         secure: false, //SSL/TLS
         auth: {
             user: 'contato@divasbeleza.com.br',
-            pass: '3xRsmYbc1tKZpF0f'
+            pass: `${process.env.PASS}`
         }
     })
     
