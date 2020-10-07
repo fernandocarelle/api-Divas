@@ -12,7 +12,7 @@ module.exports = (email, nome, mensagem, anexo) => {
     })
     
     const mail = {
-        from: "Divas <contato@divasbeleza.com.br>",
+        from: "contato@divasbeleza.com.br",
         to: "contato@divasbeleza.com.br",
         replyTo: email,
         subject: `${nome} te enviou uma mensagem`,
