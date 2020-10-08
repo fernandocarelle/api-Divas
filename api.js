@@ -23,5 +23,5 @@ app.post('/send', upload.single('anexo'), (req, res, next) => {
 })
 
 const server = http.createServer(app); 
-server.listen(3030);
+server.listen(PORT);
 console.log(`API OK NA PORTA: ${process.env.PORT || 3000}`)
