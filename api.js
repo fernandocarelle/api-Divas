@@ -9,7 +9,7 @@ app.use(require("cors")());
 app.use(bodyParser.json());
 
 app.get('/', (req, res, next) => {
-    res.json({message: "Tudo ok por aqui!"});
+    res.json({message: "Tudo ok por aqui"});
 })
 
 app.post('/send', upload.single('anexo'), (req, res, next) => { 
