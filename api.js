@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const upload = require("multer")();
+const port = process.env.PORT || 3000;
 require('dotenv').config();
 
 app.use(require("cors")()); 
@@ -23,5 +24,5 @@ app.post('/send', upload.single('anexo'), (req, res, next) => {
 })
 
 const server = http.createServer(app); 
-server.listen(3030);
-console.log(`API OK NA PORTA: ${process.env.PORT || 3030}`)
+server.listen(port);
+console.log(`API OK NA PORTA: ${port}`)
