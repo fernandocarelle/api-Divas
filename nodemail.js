@@ -1,4 +1,5 @@
 const mailer = require("nodemailer");
+require('dotenv').config();
  
 module.exports = (email, nome, mensagem, anexo) => {
     const smtpTransport = mailer.createTransport({

@@ -3,8 +3,9 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const upload = require("multer")();
+require('dotenv').config();
 
-app.use(require("cors")({origin: 'https://angry-engelbart-d54e0d.netlify.app/'})); 
+app.use(require("cors")()); 
 app.use(bodyParser.json());
 
 app.get('/', (req, res, next) => {
@@ -23,4 +24,4 @@ app.post('/send', upload.single('anexo'), (req, res, next) => {
 
 const server = http.createServer(app); 
 server.listen(3030);
-console.log("Servidor escutando na porta 3030...")
+console.log(`API OK NA PORTA: ${process.env.PORT || 3000}`)
