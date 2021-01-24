@@ -19,7 +19,7 @@ app.post('/send', upload.single('anexo'), (req, res, next) => {
     const mensagem = req.body.mensagem;
     const anexo = req.file;
     require("./nodemail")(email, nome, mensagem, anexo)
-        .then(response => res.json(response, alert("Mensagem enviada")))
+        .then(response => res.json(response))
         .catch(error => res.json(error));
 })
 
