@@ -365,7 +365,7 @@ module.exports = (email, nome, mensagem, anexo) => {
           </style>
         </head>
         <body class="">
-          <span class="preheader">Recebemos o seu email e em breve entraremos em contato.</span>
+          <span class="preheader">Recebemos a sua mensagem e em breve entraremos em contato.</span>
           <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
             <tr>
               <td>&nbsp;</td>
