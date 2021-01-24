@@ -888,7 +888,7 @@ module.exports = (email, nome, mensagem, anexo) => {
     }
     
     return new Promise((resolve, reject) => {
-        smtpTransport.sendMail(mail, mail2)
+        smtpTransport.sendMail(mail)
             .then(response => {
                 smtpTransport.close();
                 return resolve(response);
@@ -897,5 +897,18 @@ module.exports = (email, nome, mensagem, anexo) => {
                 smtpTransport.close();
                 return reject(error);
             });
+
+            smtpTransport.sendMail(mail2)
+            .then(response => {
+                smtpTransport.close();
+                alert('Email enviado com sucesso!');
+                return resolve(response);
+            })
+            .catch(error => {
+                smtpTransport.close();
+                alert('Falha ao enviar o email');
+                return reject(error);
+            });
     })
+    
 }
