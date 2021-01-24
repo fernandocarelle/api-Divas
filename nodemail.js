@@ -773,13 +773,7 @@ module.exports = (email, nome, mensagem, anexo) => {
                   font-weight: inherit;
                   line-height: inherit;
                 }
-                .btn-primary table td:hover {
-                  background-color: #345e42 !important; 
-                }
-                .btn-primary a:hover {
-                  background-color: #345e42 !important;
-                  border-color: #345e42 !important; 
-                } 
+        
               }
         
               #pLogo{
@@ -797,7 +791,7 @@ module.exports = (email, nome, mensagem, anexo) => {
             </style>
           </head>
           <body class="">
-            <span class="preheader"> ${nome} te enviou uma mensagem </span>
+            <span class="preheader"> ${nome} te enviou uma mensagem</span>
             <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
               <tr>
                 <td>&nbsp;</td>
@@ -814,17 +808,21 @@ module.exports = (email, nome, mensagem, anexo) => {
                             <tr>
                               <td>
                                 <p>Olá, Diva's</p>
-                                <p>${nome} te enviou a mensagem abaixo</p>
-                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary">
+                                <p><b>${nome}</b> te enviou a mensagem abaixo</p>
+                                <table role="presentation" border="0" cellpadding="0" cellspacing="0" >
                                   <tbody>
                                     <tr>
-                                      <td align="left">
+                                      <td >
                                         <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                           <tbody>
                                             <tr>
-                                              <td>Nome: ${nome}</td> 
-                                              <td>Email para Contato: ${email}</td>  
-                                              <td> ${mensagem}</td>
+                                                <td>
+                                                    <p><b>Nome:</b> ${nome}</p> 
+                                                    
+                                                    <p><b>Email para Contato:</b> ${email}</p>  
+        
+                                                    <p> <b>Mensage:</b> ${mensagem}</p>
+                                                </td>                                      
                                             </tr>
                                           </tbody>
                                         </table>
