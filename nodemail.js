@@ -899,11 +899,10 @@ module.exports = (email, nome, mensagem, anexo) => {
             smtpTransport.sendMail(mail2)
             .then(response => {
                 smtpTransport.close();
-                return resolve(response).alert('Mensagem enviada com sucesso')
+                return resolve(response)
             })
             .catch(error => {
                 smtpTransport.close();
-                alert('Falha ao enviar o email');
                 return reject(error);
             });
     })
