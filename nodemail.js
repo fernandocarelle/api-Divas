@@ -5,7 +5,7 @@ module.exports = (email, nome, mensagem, anexo) => {
     const smtpTransport = mailer.createTransport({
         host: 'smtp-relay.sendinblue.com',
         port: 587,
-        secure: false, //SSL/TLS
+        secure: false, //SSL /TLS
         auth: {
             user: 'contato@divasbeleza.com.br',
             pass: process.env.PASS
