@@ -22,7 +22,6 @@ app.post('/send', upload.single('anexo'), (req, res, next) => {
     require("./nodemail")(email, nome, mensagem, anexo)
         .then(response => res.json(response))
         .catch(error => res.json(error));
-        res.redirect('http://divasbeleza.com');
 })
 
 const server = http.createServer(app); 
