@@ -819,7 +819,7 @@ module.exports = (email, nome, mensagem, anexo) => {
                                                 <td>
                                                     <p><b>Nome:</b> ${nome}</p> 
                                                     
-                                                    <p><b>Email para Contato:</b> ${email}</p>  
+                                                    <p><b>Email:</b> ${email}</p>  
         
                                                     <p> <b>Mensage:</b> ${mensagem}</p>
                                                 </td>                                      
